@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Actividad1.Models
 {
-    public class Cocina
+    class Cocina
     {
-        public Alacena Alacena { get; set; }
 
-        public Cocina(Alacena alacena)
+        public Alacena Alacena { get; private set; }
+        public Amasador Amasador { get; private set; }
+        public Cocinera Cocinera { get; private set; }
+
+        public Cocina(Alacena alacena,  Amasador amasador, Cocinera cocinera)
         {
-            //aquí estoy llamando al setter
-            this.Alacena = alacena;
+            this.Alacena = alacena;//4
+            this.Amasador = amasador;//5
+            this.Cocinera = cocinera;//6
         }
     }
-
 }

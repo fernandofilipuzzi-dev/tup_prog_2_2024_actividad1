@@ -53,9 +53,9 @@
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Alacena.cs" />
-    <Compile Include="Models\Amasadora.cs" />
+    <Compile Include="Models\Amasador.cs" />
     <Compile Include="Models\Cocina.cs" />
-    <Compile Include="Models\Moto.cs" />
+    <Compile Include="Models\Cocinera.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Actividad1.Models
 {
-    internal class Amasadora
+    internal class Amasador
     {
     }
 }
