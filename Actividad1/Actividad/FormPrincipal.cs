@@ -21,20 +21,34 @@ namespace Actividad1
         Cocina cocinaDeAna;
         private void btnClienteCrearCocina_Click(object sender, EventArgs e)
         {
-            Alacena alacena = new Alacena();
-            cocinaDeAna = new Cocina(alacena);
+            Alacena alacena = new Alacena();//1
+            Amasador amasador = new Amasador();//2
+            Cocinera cocineraACargo = new Cocinera("Ana");//3
+
+            cocinaDeAna = new Cocina(alacena, amasador, cocineraACargo);//4 , donde 5,6,y 7 se desarrollan dentro del constructor de Cocina
         }
 
         private void btnClienteReponer_Click(object sender, EventArgs e)
         {
             Alacena a = cocinaDeAna.Alacena;//1 y 2
             a.ReponerHarina(50);//3
-            a.ReponerFrutaAbrillantada(10);//3
+            a.ReponerFruta(10);//4
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnClienteCocina_Click(object sender, EventArgs e)
+        {
+            Alacena a = cocinaDeAna.Alacena;//1
+
+            double CantidadHarina = a.TomarHarina(5);//2
+
+            double CantidadFruta = a.TomarFruta(5);//3
+
+            //... continua.
         }
     }
 }
