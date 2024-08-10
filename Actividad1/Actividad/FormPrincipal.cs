@@ -35,20 +35,50 @@ namespace Actividad1
             a.ReponerFruta(10);//4
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+
 
         private void btnClienteCocina_Click(object sender, EventArgs e)
         {
+            //Le pedimos a la cocina su alacena
             Alacena a = cocinaDeAna.Alacena;//1
 
-            double CantidadHarina = a.TomarHarina(5);//2
+            //tomamos de la alacena 5kg de harina
+            double cantHarina = a.TomarHarina(5);//2
 
-            double CantidadFruta = a.TomarFruta(5);//3
+            //tomamos de la alacena 5kg de frutas
+            double cantFruta = a.TomarFruta(5);//3
 
-            //... continua.
+            //le pedimos a la cocina su amasador
+            Amasador am = cocinaDeAna.Amasador;//4
+
+            //5: introducimos la harian en el amasado
+            double masaProducida = am.Amasar(cantHarina);
+
+            Cocinera ana = cocinaDeAna.Cocinera;//6
+
+            listBox1.Items.Add("Misterio - Ana, reportate?");
+            listBox1.Items.Add($"Ana - {ana.ContestarEnQueEtapaEsta()}");
+
+
+            ana.CortaLaMasa();
+
+            listBox1.Items.Add("Misterio - Ana, reportate?");
+            listBox1.Items.Add($"Ana - {ana.ContestarEnQueEtapaEsta()}");
+
+            ana.FormaLaMasa();
+
+            listBox1.Items.Add("Misterio - Ana, reportate?");
+            listBox1.Items.Add($"Ana - {ana.ContestarEnQueEtapaEsta()}");
+
+            ana.Hornea();
+
+            listBox1.Items.Add("Misterio - Ana, reportate?");
+            listBox1.Items.Add($"Ana - {ana.ContestarEnQueEtapaEsta()}");
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

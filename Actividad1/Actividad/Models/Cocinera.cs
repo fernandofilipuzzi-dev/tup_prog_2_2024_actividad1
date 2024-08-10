@@ -9,25 +9,32 @@ namespace Actividad1.Models
     public class Cocinera
     {
         public string Nombre { get; private set; }
+        public string estadoTareas;
 
         public Cocinera(string nombre)
         {
             this.Nombre = nombre;
         }
 
+        
         public void CortaLaMasa()
         {
-            //aun no sabemos que implica
+            estadoTareas = "Cortando la masa";
         }
 
         public void FormaLaMasa()
         {
-            //aun no sabemos que implica
+            estadoTareas = "Formando La Masa";
         }
 
         public void Hornea()
         {
-            //aun no sabemos que implica
+            estadoTareas = "Horneando";
+        }
+
+        public string ContestarEnQueEtapaEsta() 
+        {
+            return estadoTareas;
         }
     }
 
