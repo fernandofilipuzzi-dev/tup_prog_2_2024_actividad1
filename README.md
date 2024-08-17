@@ -1,1 +1,1 @@
-# tup_prog_2_2024_actividad1
+# TUP Programación 2 - 2024 - Actividad en el aula 1 - solución
